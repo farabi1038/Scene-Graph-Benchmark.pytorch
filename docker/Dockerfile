@@ -1,4 +1,4 @@
-ARG CUDA="10.0"
+ARG CUDA="10.2"
 ARG CUDNN="7"
 
 FROM nvidia/cuda:${CUDA}-cudnn${CUDNN}-devel-ubuntu16.04
@@ -73,8 +73,13 @@ RUN git clone https://github.com/cocodataset/cocoapi.git \
  && cd cocoapi/PythonAPI \
  && python setup.py build_ext install
 
+ARG FORCE_CUDA="1"
+ENV FORCE_CUDA=${FORCE_CUDA}
+
 # install apex
 RUN cd $INSTALL_DIR
+
+#RUN nvidia-smi
 
 RUN git clone https://github.com/NVIDIA/apex.git \
  && cd apex \
@@ -84,8 +89,9 @@ RUN git clone https://github.com/NVIDIA/apex.git \
 # install PyTorch Detection
 ARG FORCE_CUDA="1"
 ENV FORCE_CUDA=${FORCE_CUDA}
-RUN git clone https://github.com/KaihuaTang/Scene-Graph-Benchmark.pytorch.git \
- && cd maskrcnn-benchmark \
+RUN nvidia-smi
+RUN git clone https://github.com/gladcolor/Scene-Graph-Benchmark.pytorch.git \
+ && cd Scene-Graph-Benchmark.pytorch \
  && python setup.py build develop
 
 RUN unset INSTALL_DIR
