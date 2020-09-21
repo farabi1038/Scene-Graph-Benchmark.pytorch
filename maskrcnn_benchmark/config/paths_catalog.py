@@ -106,16 +106,16 @@ class DatasetCatalog(object):
             "ann_file": "cityscapes/annotations/instancesonly_filtered_gtFine_test.json"
         },
         "VG_stanford_filtered": {
-            "img_dir": "vg/VG_100K",
-            "roidb_file": "vg/VG-SGG.h5",
-            "dict_file": "vg/VG-SGG-dicts.json",
-            "image_file": "vg/image_data.json",
+            "img_dir": "L:/Datasets/Visual_Genome/VG_100K",
+            "roidb_file": "L:/Datasets/Visual_Genome/VG_100K/VG-SGG.h5",
+            "dict_file": "L:/Datasets/Visual_Genome/VG_100K/VG-SGG-dicts.json",
+            "image_file": "L:/Datasets/Visual_Genome/VG_100K/image_data.json",
         },
         "VG_stanford_filtered_with_attribute": {
-            "img_dir": "vg/VG_100K",
-            "roidb_file": "vg/VG-SGG-with-attri.h5",
-            "dict_file": "vg/VG-SGG-dicts-with-attri.json",
-            "image_file": "vg/image_data.json",
+            "img_dir": "L:/Datasets/Visual_Genome/VG_100K",
+            "roidb_file": "L:/Datasets/Visual_Genome/VG-SGG-with-attri.h5",
+            "dict_file": "L:/Datasets/Visual_Genome/VG_100K/VG-SGG-dicts-with-attri.json",
+            "image_file": "L:/Datasets/Visual_Genome/image_data.json",
         },
     }
 
