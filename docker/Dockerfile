@@ -1,4 +1,4 @@
-ARG CUDA="10.2"
+ARG CUDA="10.0"
 ARG CUDNN="7"
 
 FROM nvidia/cuda:${CUDA}-cudnn${CUDNN}-devel-ubuntu16.04
@@ -23,10 +23,6 @@ RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.s
 RUN bash Miniconda3-latest-Linux-x86_64.sh -p /miniconda -b
 RUN rm Miniconda3-latest-Linux-x86_64.sh
 ENV PATH=/miniconda/bin:${PATH}
-
-
-
-
 RUN conda update -y conda
 
 #RUN wget \
@@ -55,8 +51,7 @@ ENV PATH=$CONDA_PREFIX/bin:$PATH
 ENV CONDA_AUTO_UPDATE_CONDA=false
 
 RUN conda install -y ipython
-RUN pip install requests ninja yacs cython matplotlib opencv-python tqdm overrides
-RUN pip install scipy
+RUN pip install requests ninja yacs cython matplotlib opencv-python tqdm overrides h5py scipy
 
 # Install PyTorch 1.4
 ARG CUDA
@@ -79,13 +74,12 @@ RUN git clone https://github.com/cocodataset/cocoapi.git \
  && python setup.py build_ext install
 
 ARG FORCE_CUDA="1"
+ENV TORCH_CUDA_ARCH_LIST="6.0"
 ENV FORCE_CUDA=${FORCE_CUDA}
 
 # install apex
 RUN cd $INSTALL_DIR
 
-#RUN nvidia-smi
-ENV TORCH_CUDA_ARCH_LIST="6.0"
 RUN git clone https://github.com/NVIDIA/apex.git \
  && cd apex \
  && python setup.py install --cuda_ext --cpp_ext
@@ -93,11 +87,33 @@ RUN git clone https://github.com/NVIDIA/apex.git \
 
 # install PyTorch Detection
 ARG FORCE_CUDA="1"
+ENV TORCH_CUDA_ARCH_LIST="6.0"
 ENV FORCE_CUDA=${FORCE_CUDA}
-RUN nvidia-smi
-RUN git clone https://github.com/gladcolor/Scene-Graph-Benchmark.pytorch.git \
+RUN git clone https://github.com/KaihuaTang/Scene-Graph-Benchmark.pytorch.git \
  && cd Scene-Graph-Benchmark.pytorch \
  && python setup.py build develop
 
 RUN unset INSTALL_DIR
+
+
+RUN echo 'Started annaconda installing...'
+
+# Install basic dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        build-essential \
+        cmake \
+        git \
+        wget \
+        libopencv-dev \
+        libsnappy-dev \
+        python-dev \
+        python-pip \
+        tzdata \
+        vim
+
+# Install anaconda for python 3.6
+RUN curl -LO  https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh -O ~/anaconda.sh && \
+    /bin/bash ~/anaconda.sh -b -p /opt/conda && \
+    rm ~/anaconda.sh && \
+    echo "export PATH=/opt/conda/bin:$PATH" >> ~/.bashrc
 
