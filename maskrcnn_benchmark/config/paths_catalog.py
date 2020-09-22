@@ -106,16 +106,16 @@ class DatasetCatalog(object):
             "ann_file": "cityscapes/annotations/instancesonly_filtered_gtFine_test.json"
         },
         "VG_stanford_filtered": {
-            "img_dir": "datasets/vg/VG_100K",
-            "roidb_file": "datasets/vg/VG-SGG.h5",
-            "dict_file": "datasets/vg/VG-SGG-dicts.json",
-            "image_file": "datasets/vg/image_data.json",
+            "img_dir": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/VG_100K",
+            "roidb_file": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/VG-SGG.h5",
+            "dict_file": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/VG-SGG-dicts.json",
+            "image_file": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/image_data.json",
         },
         "VG_stanford_filtered_with_attribute": {
-            "img_dir": "datasets/vg/VG_100K",
-            "roidb_file": "datasets/vg/VG-SGG-with-attri.h5",
-            "dict_file": "datasets/vg/VG-SGG-dicts-with-attri.json",
-            "image_file": "datasets/vg/image_data.json",
+            "img_dir": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/VG_100K",
+            "roidb_file": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/VG-SGG-with-attri.h5",
+            "dict_file": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/VG-SGG-dicts-with-attri.json",
+            "image_file": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/image_data.json",
         },
 
         # for Windows
