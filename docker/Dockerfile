@@ -23,6 +23,10 @@ RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.s
 RUN bash Miniconda3-latest-Linux-x86_64.sh -p /miniconda -b
 RUN rm Miniconda3-latest-Linux-x86_64.sh
 ENV PATH=/miniconda/bin:${PATH}
+ENV TORCH_CUDA_ARCH_LIST="3.5"
+
+
+
 RUN conda update -y conda
 
 #RUN wget \
