@@ -23,7 +23,7 @@ RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.s
 RUN bash Miniconda3-latest-Linux-x86_64.sh -p /miniconda -b
 RUN rm Miniconda3-latest-Linux-x86_64.sh
 ENV PATH=/miniconda/bin:${PATH}
-ENV TORCH_CUDA_ARCH_LIST="3.5"
+
 
 
 
@@ -56,6 +56,7 @@ ENV CONDA_AUTO_UPDATE_CONDA=false
 
 RUN conda install -y ipython
 RUN pip install requests ninja yacs cython matplotlib opencv-python tqdm overrides
+RUN pip install scipy
 
 # Install PyTorch 1.4
 ARG CUDA
@@ -84,7 +85,7 @@ ENV FORCE_CUDA=${FORCE_CUDA}
 RUN cd $INSTALL_DIR
 
 #RUN nvidia-smi
-
+ENV TORCH_CUDA_ARCH_LIST="6.0"
 RUN git clone https://github.com/NVIDIA/apex.git \
  && cd apex \
  && python setup.py install --cuda_ext --cpp_ext
