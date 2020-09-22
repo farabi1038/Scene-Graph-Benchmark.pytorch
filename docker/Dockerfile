@@ -74,7 +74,8 @@ RUN git clone https://github.com/cocodataset/cocoapi.git \
  && python setup.py build_ext install
 
 ARG FORCE_CUDA="1"
-ENV TORCH_CUDA_ARCH_LIST="6.0"
+#ENV TORCH_CUDA_ARCH_LIST="Kepler;Kepler+Tesla;Maxwell;Maxwell+Tegra;Pascal;Volta;Turing;Ampere"
+ENV TORCH_CUDA_ARCH_LIST="Turing"
 ENV FORCE_CUDA=${FORCE_CUDA}
 
 # install apex
@@ -86,9 +87,9 @@ RUN git clone https://github.com/NVIDIA/apex.git \
 
 
 # install PyTorch Detection
-ARG FORCE_CUDA="1"
-ENV TORCH_CUDA_ARCH_LIST="6.0"
-ENV FORCE_CUDA=${FORCE_CUDA}
+# ARG FORCE_CUDA="1"
+# ENV TORCH_CUDA_ARCH_LIST="6.0"
+# ENV FORCE_CUDA=${FORCE_CUDA}
 RUN git clone https://github.com/KaihuaTang/Scene-Graph-Benchmark.pytorch.git \
  && cd Scene-Graph-Benchmark.pytorch \
  && python setup.py build develop
@@ -112,7 +113,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         vim
 
 # Install anaconda for python 3.6
-RUN curl -LO  https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh -O ~/anaconda.sh && \
+RUN curl -L  https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh -o ~/anaconda.sh && \
     /bin/bash ~/anaconda.sh -b -p /opt/conda && \
     rm ~/anaconda.sh && \
     echo "export PATH=/opt/conda/bin:$PATH" >> ~/.bashrc
