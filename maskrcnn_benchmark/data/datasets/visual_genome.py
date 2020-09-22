@@ -303,6 +303,7 @@ def load_image_filenames(img_dir, image_file):
             continue
 
         filename = os.path.join(img_dir, basename)
+        print("img_dir", img_dir)
         if os.path.exists(filename):
             fns.append(filename)
             img_info.append(img)
