@@ -14,5 +14,5 @@ SOLVER.MAX_ITER 50000  \
 SOLVER.VAL_PERIOD 2000  \
 SOLVER.CHECKPOINT_PERIOD 2000  \
 GLOVE_DIR /home/h/hn235/Visual_Genome/glove \
-MODEL.PRETRAINED_DETECTOR_CKPT /home/h/hn235/Visual_Genome/pretrained_faster_rcnn/model_final.pth  \
-OUTPUT_DIR /home/h/hn235/Visual_Genome/checkpoints/causal-motifs-sgcls-exmp
+MODEL.PRETRAINED_DETECTOR_CKPT datasets/vg/pretrained_faster_rcnn/model_final.pth  \
+OUTPUT_DIR output/checkpoints/sgdet
