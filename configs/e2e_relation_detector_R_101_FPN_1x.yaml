@@ -51,9 +51,12 @@ MODEL:
     ATTRIBUTE_BGFG_SAMPLE: True    
     ATTRIBUTE_BGFG_RATIO: 3        
 DATASETS:
-  TRAIN: ("VG_stanford_filtered_with_attribute_train",)
-  VAL: ("VG_stanford_filtered_with_attribute_val",)
-  TEST: ("VG_stanford_filtered_with_attribute_test",)
+#  TRAIN: ("VG_stanford_filtered_with_attribute_train",)
+#  VAL: ("VG_stanford_filtered_with_attribute_val",)
+#  TEST: ("VG_stanford_filtered_with_attribute_test",)
+  TRAIN: ("VG_stanford_with_attribute_train",)
+  VAL: ("VG_stanford_with_attribute_val",)
+  TEST: ("VG_stanford_with_attribute_test",)
 DATALOADER:
   SIZE_DIVISIBILITY: 32
 SOLVER:
