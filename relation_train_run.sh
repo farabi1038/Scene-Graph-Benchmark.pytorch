@@ -1,5 +1,5 @@
 CUDA_VISIBLE_DEVICES=0,1 \
-python -m torch.distributed.launch --master_port 10025 --nproc_per_node=4 tools/relation_train_net.py \
+python -m torch.distributed.launch --master_port 10025 --nproc_per_node=2 tools/relation_train_net.py \
 --config-file "configs/e2e_relation_X_101_32_8_FPN_1x.yaml" \
 MODEL.ROI_RELATION_HEAD.USE_GT_BOX True  \
 MODEL.ROI_RELATION_HEAD.USE_GT_OBJECT_LABEL True  \
