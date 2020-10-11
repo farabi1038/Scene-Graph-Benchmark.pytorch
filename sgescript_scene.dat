@@ -10,10 +10,10 @@
 # partition
 #SBATCH -p xye 
 ### to request a GPU
-#SBATCH --gres=gpu:4
+#SBATCH --gres=gpu:2
 
 ###Request an amount of RAM for the job
-#SBATCH --mem=64G #32GB requested.
+#SBATCH --mem=8G #32GB requested.
 # Run on 1 node
 #SBATCH --nodes=1
 # Use 1 CPU
