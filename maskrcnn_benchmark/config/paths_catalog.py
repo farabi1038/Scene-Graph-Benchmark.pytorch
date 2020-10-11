@@ -135,21 +135,21 @@ class DatasetCatalog(object):
 
     }
 
-    if platform.system() == "Windows":
-        DATASETS['VG_stanford_filtered'] =\
-        {
-            "img_dir": "L:/Datasets/Visual_Genome/VG_100K",
-            "roidb_file": "L:/Datasets/Visual_Genome/VG_100K/VG-SGG.h5",
-            "dict_file": "L:/Datasets/Visual_Genome/VG_100K/VG-SGG-dicts.json",
-            "image_file": "L:/Datasets/Visual_Genome/VG_100K/image_data.json",
-        },
-        DATASETS['VG_stanford_filtered_with_attribute'] =\
-         {
-            "img_dir": "L:/Datasets/Visual_Genome/VG_100K",
-            "roidb_file": "L:/Datasets/Visual_Genome/VG-SGG-with-attri.h5",
-            "dict_file": "L:/Datasets/Visual_Genome/VG_100K/VG-SGG-dicts-with-attri.json",
-            "image_file": "L:/Datasets/Visual_Genome/image_data.json",
-        },
+    # if platform.system() == "Windows":
+    #     DATASETS['VG_stanford_filtered'] =\
+    #     {
+    #         "img_dir": "L:/Datasets/Visual_Genome/VG_100K",
+    #         "roidb_file": "L:/Datasets/Visual_Genome/VG_100K/VG-SGG.h5",
+    #         "dict_file": "L:/Datasets/Visual_Genome/VG_100K/VG-SGG-dicts.json",
+    #         "image_file": "L:/Datasets/Visual_Genome/VG_100K/image_data.json",
+    #     },
+    #     DATASETS['VG_stanford_filtered_with_attribute'] =\
+    #      {
+    #         "img_dir": "L:/Datasets/Visual_Genome/VG_100K",
+    #         "roidb_file": "L:/Datasets/Visual_Genome/VG-SGG-with-attri.h5",
+    #         "dict_file": "L:/Datasets/Visual_Genome/VG_100K/VG-SGG-dicts-with-attri.json",
+    #         "image_file": "L:/Datasets/Visual_Genome/image_data.json",
+    #     },
 
     @staticmethod
     def get(name, cfg):
