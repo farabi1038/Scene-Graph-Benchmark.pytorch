@@ -105,18 +105,32 @@ class DatasetCatalog(object):
             "img_dir": "cityscapes/images",
             "ann_file": "cityscapes/annotations/instancesonly_filtered_gtFine_test.json"
         },
+        # "VG_stanford_filtered": {
+        #     "img_dir": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/VG_100K",
+        #     "roidb_file": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/VG-SGG.h5",
+        #     "dict_file": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/VG-SGG-dicts.json",
+        #     "image_file": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/image_data.json",
+        # },
+        # "VG_stanford_filtered_with_attribute": {
+        #     "img_dir": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/VG_100K",
+        #     "roidb_file": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/VG-SGG-with-attri.h5",
+        #     "dict_file": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/VG-SGG-dicts-with-attri.json",
+        #     "image_file": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/image_data.json",
+        # },
+
         "VG_stanford_filtered": {
-            "img_dir": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/VG_100K",
-            "roidb_file": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/VG-SGG.h5",
-            "dict_file": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/VG-SGG-dicts.json",
-            "image_file": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/image_data.json",
+            "img_dir": "/home/h/hn235/StreetGraph/VG_100K",
+            "roidb_file": "/home/h/hn235/StreetGraph/VG-SGG.h5",
+            "dict_file": "/home/h/hn235/StreetGraph/VG-SGG-dicts.json",
+            "image_file": "/home/h/hn235/StreetGraph/image_data.json",
         },
         "VG_stanford_filtered_with_attribute": {
-            "img_dir": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/VG_100K",
-            "roidb_file": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/VG-SGG-with-attri.h5",
-            "dict_file": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/VG-SGG-dicts-with-attri.json",
-            "image_file": "/ssd_nobackup/huan/Scene-Graph-Benchmark.pytorch/datasets/vg/image_data.json",
+            "img_dir": "/home/h/hn235/StreetGraph/images",
+            "roidb_file": "/home/h/hn235/StreetGraph/Street-dicts.h5",
+            "dict_file": "/home/h/hn235/StreetGraph/Street-dicts.json",
+            "image_file": "/home/h/hn235/StreetGraph/images.json",
         },
+
 
 
     }
