@@ -30,5 +30,5 @@ module load cuda
 ### singularity pull docker://gladcolor/solo
 ###singularity exec --nv  
 nvidia-smi
-singularity exec --nv --bind /ssd_nobackup docker://gladcolor/scene-graph2 sh /home/h/hn235/Scene-Graph-Benchmark.pytorch/train_run.sh
+singularity exec --nv --bind /ssd_nobackup /home/h/hn235/scene-graph2_latest.sif sh /home/h/hn235/Scene-Graph-Benchmark.pytorch/relation_train_run.sh
 
