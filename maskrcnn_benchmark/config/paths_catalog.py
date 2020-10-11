@@ -120,16 +120,16 @@ class DatasetCatalog(object):
 
         "VG_stanford_filtered": {
             "VG_stanford_filtered_with_attribute": {
-                "img_dir": "/home/h/hn235/StreetGraph/images",
-                "roidb_file": "/home/h/hn235/StreetGraph/Street-dicts.h5",
-                "dict_file": "/home/h/hn235/StreetGraph/Street-dicts.json",
-                "image_file": "/home/h/hn235/StreetGraph/images.json",
+                "img_dir": "/home/h/hn235/StreetGraph/VG_images",
+                "roidb_file": "/home/h/hn235/StreetGraph/VG_Street-dicts.h5",
+                "dict_file": "/home/h/hn235/StreetGraph/VG_Street-dicts.json",
+                "image_file": "/home/h/hn235/StreetGraph/VG_images.json",
         },
         "VG_stanford_filtered_with_attribute": {
-            "img_dir": "/home/h/hn235/StreetGraph/images",
-            "roidb_file": "/home/h/hn235/StreetGraph/Street-dicts.h5",
-            "dict_file": "/home/h/hn235/StreetGraph/Street-dicts.json",
-            "image_file": "/home/h/hn235/StreetGraph/images.json",
+            "img_dir": "/home/h/hn235/StreetGraph/VG_images",
+            "roidb_file": "/home/h/hn235/StreetGraph/VG_Street-dicts.h5",
+            "dict_file": "/home/h/hn235/StreetGraph/VG_Street-dicts.json",
+            "image_file": "/home/h/hn235/StreetGraph/VG_images.json",
         },
 
 
